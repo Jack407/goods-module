@@ -22,6 +22,9 @@ public enum ResponseCode {
     RESOURCE_ID_OUTSCOPE(505,"操作的资源id不是自己的对象"),
     FILE_NO_WRITE_PERMISSION(506,"目录文件夹没有写入的权限"),
     RESOURCE_FALSIFY(507, "信息签名不正确"),
+    IMG_FORMAT_ERROR(508,"图片格式不正确"),
+    IMG_SIZE_EXCEED(509,"图片大小超限"),
+
     //--------------------------------------------
 
 
@@ -82,7 +85,45 @@ public enum ResponseCode {
     USER_HASSHOP(908,"用户已经有店铺"),
     COUPON_NOTBEGIN(909,"未到优惠卷领取时间"),
     COUPON_FINISH(910,"优惠卷领罄"),
-    COUPON_END(911,"优惠卷活动终止");
+    COUPON_END(911,"优惠卷活动终止"),
+    COUPON_ACTIVITY_TYPE_ERROR(912,"优惠活动的类型不为总数控制类型"),
+    COUPON_IS_MAX(913,"用户所领取的优惠券已经达到了上限"),
+    COUPON_IS_OUT(914,"用户所领取的优惠券已经领完"),
+    SPU_SHOP_NOT_MATCH(915,"所选择商品不在所选择的店铺内"),
+    BEGIN_AFTER_END(916,"结束时间在开始时间之前"),
+    BEGIN_BEFORE_NOW(917,"开始时间已过"),
+    ACTIVITY_SHOP_NOT_MATCH(918,"优惠活动与店铺不一致"),
+    GOODS_NOT_IN_SHOP(919,"该商品不在该店铺内"),
+    CANT_ADD_SPU_TO_ACTIVITY(920,"只能给从未上线的优惠活动中移除商品"),
+    COUPON_USER_NO_MATCH(921,"该优惠券不属于此用户"),
+    COUPON_CANT_RETURN(922,"优惠券无法退回"),
+    NO_SUFFICIENT_GOODS(923,"预售量大于库存量"),
+    ACTIVITY_NOT_IN_SHOP(924,"活动不属于该店铺"),
+    SHOP_CANT_CHANGE(925,"当前店铺信息无法修改"),
+    USER_CANT_AUDIT(926,"当前用户无审核权限"),
+    SHOP_CANT_AUDIT(927,"当前店铺无法审批"),
+    SHOP_CANT_ONLINE(928,"当前店铺无法上线"),
+    SHOP_CANT_OFFLINE(929,"当前店铺无法下线"),
+    COMMENT_CANT_AUDIT(930,"当前评论无法审批"),
+    SPU_CANT_ONLINE(931,"当前商品无法上架"),
+    SPU_CANT_OFFLINE(932,"当前商品无法下架"),
+    FLOAT_PRICE_QUANTITY_BIGGER(933,"价格浮动的库存量大于sku的库存量"),
+    FLOAT_PRICE_NOT_IN_SHOP(934,"价格浮动不在当前商店内"),
+    NO_PRI_TO_BRAND(935,"无品牌的权限"),
+    NO_PRI_TO_CATEGORY(936,"无分类的权限"),
+    SPU_CANT_ADD_TO_FIRST_CATEGORY(937,"商品不能加入第一级分类"),
+    SPU_NO_BELONG_TO_CATEGORY(938,"当前商品不属于此分类"),
+    SPU_NO_BELONG_TO_BRAND(939,"当前商品不属于此品牌"),
+    FLASH_SALE_DATE_CONFLICT(940,"秒杀活动时间冲突"),
+    FLASH_SALE_ITEM_AND_FLASH_SALE_CONFLICT(941,"秒杀活动与当前秒杀项中的活动不一致"),
+    SHOP_SKU_IMAGE_FAIL(942,"SKU图片上传失败"),
+    NO_PRI_TO_SYSTEM(943,"没有权限"),
+    NO_THIS_SHOP(944,"没有该店铺"),
+    NO_THIS_SPU(945,"没有该商品"),
+    NO_THIS_ACTIVITY(946,"没有该活动"),
+    COUPON_REPEAT(947,"不能重复领券"),
+    AC_CANT_CHANGE(948,"优惠活动无法修改"),
+    COUPON_CANT_GET(949,"优惠券无法领取");
 
     private int code;
     private String message;
